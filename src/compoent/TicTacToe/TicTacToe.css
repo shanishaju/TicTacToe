@@ -1,14 +1,14 @@
 
 .container{
     text-align: center;
+    height: 90vh !important;
 
     
 
 }
 .title{
-    margin-top: 50px;
     color: wheat;
-    font-size: 60px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,24 +23,26 @@
     background-color: #1f3540;
     font-size: 26px;
     color: wheat;
-    margin-top: 25px;
     margin-bottom: 50px
 }
 .boxes{
     display: flex;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
     background-color: #1f3540;
 
     border:  4px solid #0f1b21;
     border-radius: 12px;
     cursor: pointer; 
+
 }
+
 .board{
-    height: 600px;
-    width: 564px;
+    height: 70vh;
+    width: 464px;
     display: flex;
     margin: auto;
+    
 }
 .boxes img{
     margin: 50px 50px;
