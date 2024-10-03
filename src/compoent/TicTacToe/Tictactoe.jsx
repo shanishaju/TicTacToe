@@ -69,6 +69,8 @@ function Tictactoe() {
   };
   const reset = ()=>{
      setLock(false)
+      data = ["", "", "", "", "", "", "", "", ""];
+
      titleRef.current.innerHTML ="Tic Tac Toe"
      box_array.map((e)=>{
       e.current.innerHTML=""
