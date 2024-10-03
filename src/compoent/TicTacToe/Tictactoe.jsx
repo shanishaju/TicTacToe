@@ -5,6 +5,7 @@ import cross from '../Assets/cross.png';
 
 let data = ["", "", "", "", "", "", "", "", ""];
 
+
 function Tictactoe() {
   let [count, setCount] = useState(0);
   let [lock, setLock] = useState(false);
@@ -61,12 +62,18 @@ function Tictactoe() {
 
   const won = (winner) => {
     setLock(true);
+    document.getElementById('con').style.backgroundImage = "url('https://i.gifer.com/origin/d5/d5fc616eee7fe45299b6f164734f53de_w200.gif')";
+    document.getElementById('con').style.backgroundSize = "cover"; // Ensures the GIF covers the entire background
+    document.getElementById('con').style.backgroundRepeat = "no-repeat"; // Prevents the GIF from repeating
+    document.getElementById('con').style.backgroundPosition = "center"; // Centers the GIF
+  
     if (winner === "x") {
       titleRef.current.innerHTML = `Congratulations:  Player-One Wins`;
     } else {
       titleRef.current.innerHTML = `Congratulations: Player-Two Wins`;
     }
   };
+  
   const reset = ()=>{
      setLock(false)
       data = ["", "", "", "", "", "", "", "", ""];
@@ -75,6 +82,8 @@ function Tictactoe() {
      box_array.map((e)=>{
       e.current.innerHTML=""
      })
+     document.getElementById('con').style.backgroundImage = "none";
+
   }
 
   return (
